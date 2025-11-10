@@ -845,11 +845,11 @@ module.exports = function(RED)
 	RED.httpAdmin.get('/hue/resources', function(req, res, next)
 	{
 		const targetType = req.query.type;
+		var protocol = req.query.protocol || 'http';
 
 		// GET ALL RULES
 		if(targetType == "rule")
 		{
-			var protocol = req.query.protocol || 'http';
 			API.request({ config: { bridge: req.query.bridge, key: req.query.key, protocol: protocol }, resource: "/rules", version: 1 })
 			.then(function(rules)
 			{
@@ -878,7 +878,6 @@ module.exports = function(RED)
 		// GET ALL OTHER RESOURCES
 		else
 		{
-			var protocol = req.query.protocol || 'http';
 			API.request({ config: { bridge: req.query.bridge, key: req.query.key, protocol: protocol }, resource: "all" })
 			.then(function(allResources)
 			{
