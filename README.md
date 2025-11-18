@@ -8,22 +8,23 @@ HueMagic provides several input and output nodes for Node-RED and is the most in
 
 ## ⚠️ About This Fork
 
-**This is a community-maintained fork** of the original [HueMagic project](https://github.com/Foddy/node-red-contrib-huemagic) by [Foddy](https://github.com/Foddy).
+**This is a community-maintained fork** of [mauricedominic/node-red-contrib-huemagic](https://github.com/mauricedominic/node-red-contrib-huemagic), which itself is a fork of the original [HueMagic project](https://github.com/Foddy/node-red-contrib-huemagic) by [Foddy](https://github.com/Foddy).
 
 ### Why This Fork Exists
 
-This fork was created because the original project appears to be less actively maintained. All code and documentation from the original project have been preserved **exactly as-is**, with only one addition:
+This fork was created because the upstream repository ([mauricedominic/node-red-contrib-huemagic](https://github.com/mauricedominic/node-red-contrib-huemagic)) appears to be less actively maintained. All code and documentation from the upstream project have been preserved **exactly as-is**, with only one addition:
 
 - ✅ **Added support for Philips Hue Bridge Pro** - This is the only new feature in this fork
 
 ### Credits & Attribution
 
+- **Direct Fork Source**: [mauricedominic/node-red-contrib-huemagic](https://github.com/mauricedominic/node-red-contrib-huemagic) by [mauricedominic](https://github.com/mauricedominic)
 - **Original Project**: [node-red-contrib-huemagic](https://github.com/Foddy/node-red-contrib-huemagic) by [Foddy](https://github.com/Foddy)
 - **Original Author**: Foddy Botosakis
 - **License**: Apache-2.0 (preserved from original project)
-- **All code and documentation**: Reproduced exactly as provided by the original maintainers
+- **All code and documentation**: Reproduced exactly as provided by the upstream maintainers
 
-This fork maintains full compatibility with the original project while adding support for newer Hue Bridge Pro devices. If the original project becomes actively maintained again, we encourage users to switch back to the official version.
+This fork maintains full compatibility with the upstream project while adding support for newer Hue Bridge Pro devices. If the upstream project becomes actively maintained again, we encourage users to switch back to that version.
 
 ### What's New in This Fork
 
@@ -98,7 +99,7 @@ _Please make sure that you deactivate other Hue-related nodes in Node-RED and me
 
 HueMagic provides a large selection of full featured sample flows for all nodes. You can find these examples in the [examples folder on GitHub](https://github.com/BordetNicolas/node-red-contrib-huemagic/tree/master/examples) or directly in Node-RED. To import a full featured example into your Node-RED interface, click on the Node-RED menu icon, then select "Import" and navigate to "Examples" in the sidebar of the popup. Then select the HueMagic folder and your desired node to import a sample flow.
 
-<a href="https://github.com/Foddy/node-red-contrib-huemagic/tree/master/examples"><img alt="Instructions to import examples in Node-RED" src="https://user-images.githubusercontent.com/5302050/148696808-f730ad36-8d0b-4b5b-99b2-1917831f8916.gif" width="100%"></a>
+<a href="https://github.com/mauricedominic/node-red-contrib-huemagic/tree/master/examples"><img alt="Instructions to import examples in Node-RED" src="https://user-images.githubusercontent.com/5302050/148696808-f730ad36-8d0b-4b5b-99b2-1917831f8916.gif" width="100%"></a>
 
 ## Hue Bridge
 The "Hue Bridge" node is a universal node that can output all settings of the bridge and status messages from other nodes.
@@ -234,7 +235,7 @@ Create an `array` with the respective animation steps in the form of an object a
 | delay (int) | Number of milliseconds to wait until this step is carried out |
 | animation (object) | The object contains the action(s) to be carried out in this step. Identical parameters as for the "Hue Light" & "Hue Group" nodes |
 
-If you have created your own animation that you would like to share with others, add it at `/huemagic/animations/XXX-youranimationname.json` and create a pull request. Take a look at [this directory](https://github.com/Foddy/node-red-contrib-huemagic/tree/master/huemagic/animations) for structure help.
+If you have created your own animation that you would like to share with others, add it at `/huemagic/animations/XXX-youranimationname.json` and create a pull request. Take a look at [this directory](https://github.com/mauricedominic/node-red-contrib-huemagic/tree/master/huemagic/animations) for structure help.
 
 ### Example of a custom animation
 
@@ -1043,13 +1044,16 @@ The full changelog [changelog](https://github.com/BordetNicolas/node-red-contrib
 
 ## Credits & Acknowledgments
 
-**Original Project**: This is a fork of [node-red-contrib-huemagic](https://github.com/Foddy/node-red-contrib-huemagic) by [Foddy](https://github.com/Foddy).
+**Direct Fork Source**: This is a fork of [mauricedominic/node-red-contrib-huemagic](https://github.com/mauricedominic/node-red-contrib-huemagic) by [mauricedominic](https://github.com/mauricedominic).
 
+**Original Project**: The upstream repository is itself a fork of the original [node-red-contrib-huemagic](https://github.com/Foddy/node-red-contrib-huemagic) by [Foddy](https://github.com/Foddy).
+
+- **Upstream Repository**: https://github.com/mauricedominic/node-red-contrib-huemagic
 - **Original Author**: Foddy Botosakis
 - **Original Repository**: https://github.com/Foddy/node-red-contrib-huemagic
 - **License**: Apache-2.0
 
-All code, documentation, and features from the original project have been preserved exactly as provided. This fork adds only support for Philips Hue Bridge Pro devices.
+All code, documentation, and features from the upstream project have been preserved exactly as provided. This fork adds only support for Philips Hue Bridge Pro devices.
 
 The original HueMagic project was made with a pinch of magic in Stuttgart, Germany, and was sponsored by [DGTL.ONE](https://dgtl.one/?from=HueMagic), [JetBrains](https://www.jetbrains.com/?from=HueMagic) and [BrowserStack](https://www.browserstack.com?from=HueMagic).
 
