@@ -1,20 +1,41 @@
-[![Hue Magic Logo](https://gist.githubusercontent.com/Foddy/9b647b910d03a31cee40f97c3988dd1c/raw/7ee635bd958ad04d7ba53c6c40ec401f879bffc2/huemagic-logo.svg)](https://flows.nodered.org/node/node-red-contrib-huemagic-fork)
+[![Hue Magic Logo](https://gist.githubusercontent.com/Foddy/9b647b910d03a31cee40f97c3988dd1c/raw/7ee635bd958ad04d7ba53c6c40ec401f879bffc2/huemagic-logo.svg)](https://flows.nodered.org/node/node-red-contrib-huemagic-napadelice)
 
 # HueMagic - Philips Hue nodes for Node-RED
 
-[![npm](https://img.shields.io/npm/v/node-red-contrib-huemagic-fork.svg?style=flat-square)](https://www.npmjs.com/package/node-red-contrib-huemagic-fork/) [![GitHub license](https://img.shields.io/badge/license-Apache%202-blue.svg?style=flat-square)](https://raw.githubusercontent.com/mauricedominic/node-red-contrib-huemagic/master/LICENSE) [![Donate via PayPal](https://img.shields.io/badge/Donate-PayPal-blue.svg?style=flat-square)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LUQ7CWBWQ3Q4U) [![npm](https://img.shields.io/npm/dt/node-red-contrib-huemagic-fork.svg?style=flat-square)](https://www.npmjs.com/package/node-red-contrib-huemagic-fork)
+[![npm](https://img.shields.io/npm/v/node-red-contrib-huemagic-napadelice.svg?style=flat-square)](https://www.npmjs.com/package/node-red-contrib-huemagic-napadelice/) [![GitHub license](https://img.shields.io/badge/license-Apache%202-blue.svg?style=flat-square)](https://raw.githubusercontent.com/BordetNicolas/node-red-contrib-huemagic/master/LICENSE) [![npm](https://img.shields.io/npm/dt/node-red-contrib-huemagic-napadelice.svg?style=flat-square)](https://www.npmjs.com/package/node-red-contrib-huemagic-napadelice)
 
 HueMagic provides several input and output nodes for Node-RED and is the most in-depth and easy to use solution to control Philips Hue bridges, lights, groups, scenes, rules, buttons/switches, motion sensors, temperature sensors and light level sensors.
 
-# HueMagic - Fork
+## ⚠️ About This Fork
 
-As the HueMagic main repository has been less frequently updated, I decided on the creation of a fork that includes community contributions until the maintenance on the main repository has improved. With this fork I have also included a corresponding NPM package for ease of use in Node-RED.
+**This is a community-maintained fork** of the original [HueMagic project](https://github.com/Foddy/node-red-contrib-huemagic) by [Foddy](https://github.com/Foddy).
 
-# HueMagic - Fork contrib migration
+### Why This Fork Exists
 
-You can migrate via the UI or via Terminal.
+This fork was created because the original project appears to be less actively maintained. All code and documentation from the original project have been preserved **exactly as-is**, with only one addition:
 
-## UI Migration
+- ✅ **Added support for Philips Hue Bridge Pro** - This is the only new feature in this fork
+
+### Credits & Attribution
+
+- **Original Project**: [node-red-contrib-huemagic](https://github.com/Foddy/node-red-contrib-huemagic) by [Foddy](https://github.com/Foddy)
+- **Original Author**: Foddy Botosakis
+- **License**: Apache-2.0 (preserved from original project)
+- **All code and documentation**: Reproduced exactly as provided by the original maintainers
+
+This fork maintains full compatibility with the original project while adding support for newer Hue Bridge Pro devices. If the original project becomes actively maintained again, we encourage users to switch back to the official version.
+
+### What's New in This Fork
+
+- **Philips Hue Bridge Pro Support**: Added functionality to work with the newer Hue Bridge Pro devices
+
+Everything else remains identical to the original project.
+
+## Migration from Original Package
+
+You can migrate from the original `node-red-contrib-huemagic` package to this fork via the UI or via Terminal.
+
+### UI Migration
 In order to make use of this fork without having to re-create all of your existing Node-RED flows, you can take the following steps:
 
 1. Create a backup of all flows that refer to the huemagic nodes
@@ -22,20 +43,20 @@ In order to make use of this fork without having to re-create all of your existi
 3. Remove all the huemagic related configuration nodes
 4. Deploy all changes
 5. Remove the original [node-red-contrib-huemagic](https://www.npmjs.com/package/node-red-contrib-huemagic) package
-6. Install the [node-red-contrib-huemagic-fork](https://www.npmjs.com/package/node-red-contrib-huemagic-fork) package
+6. Install the [node-red-contrib-huemagic-napadelice](https://www.npmjs.com/package/node-red-contrib-huemagic-napadelice) package
 7. Restore the backup created in step 1
 8. Deploy all changes
 
-## Terminal Migration
+### Terminal Migration
 1. Go into the .node-red directory
-2. execute 'npm remove node-red-contrib-huemagic'
-3. execute 'npm install node-red-contrib-huemagic-fork'
-4. Restart node red
+2. execute `npm remove node-red-contrib-huemagic`
+3. execute `npm install node-red-contrib-huemagic-napadelice`
+4. Restart Node-RED
 
 # HueMagic
 ### Features
 
-* Simple and comprehensive control of the Hue Bridge and connected devices
+* Simple and comprehensive control of the Hue Bridge (including Bridge Pro) and connected devices
 * Automatic discovery of Philips Hue bridges as well as devices, scenes & groups…
 * Output and input of multiple color code definitions *(HEX, RGB & human readable color names)*
 * Automatic color temperature & brightness setting based on the current time
@@ -53,9 +74,9 @@ In order to make use of this fork without having to re-create all of your existi
 
 ### Installation
 
-HueMagic was written for **Node.js 14+** and **Node-RED v2.1+**. It supports the square-shaped Hue Bridge with the **firmware 1948086000+** or higher. You can install HueMagic directly via the [Node-RED Palette Manager](https://nodered.org/docs/user-guide/editor/palette/manager) or manually using [npm / yarn](https://nodered.org/docs/user-guide/runtime/adding-nodes).
+HueMagic was written for **Node.js 14+** and **Node-RED v2.1+**. It supports the square-shaped Hue Bridge with the **firmware 1948086000+** or higher, as well as the newer **Philips Hue Bridge Pro**. You can install HueMagic directly via the [Node-RED Palette Manager](https://nodered.org/docs/user-guide/editor/palette/manager) or manually using [npm / yarn](https://nodered.org/docs/user-guide/runtime/adding-nodes).
 
-npm install node-red-contrib-huemagic-fork
+npm install node-red-contrib-huemagic-napadelice
 
 _Please make sure that you deactivate other Hue-related nodes in Node-RED and meet the minimum requirements of Node.js and the Philips Hue Bridge firmware!_
 
@@ -75,7 +96,7 @@ _Please make sure that you deactivate other Hue-related nodes in Node-RED and me
 
 ### Examples
 
-HueMagic provides a large selection of full featured sample flows for all nodes. You can find these examples in the [examples folder on GitHub](https://github.com/mauricedominic/node-red-contrib-huemagic/tree/master/examples) or directly in Node-RED. To import a full featured example into your Node-RED interface, click on the Node-RED menu icon, then select "Import" and navigate to "Examples" in the sidebar of the popup. Then select the HueMagic folder and your desired node to import a sample flow.
+HueMagic provides a large selection of full featured sample flows for all nodes. You can find these examples in the [examples folder on GitHub](https://github.com/BordetNicolas/node-red-contrib-huemagic/tree/master/examples) or directly in Node-RED. To import a full featured example into your Node-RED interface, click on the Node-RED menu icon, then select "Import" and navigate to "Examples" in the sidebar of the popup. Then select the HueMagic folder and your desired node to import a sample flow.
 
 <a href="https://github.com/Foddy/node-red-contrib-huemagic/tree/master/examples"><img alt="Instructions to import examples in Node-RED" src="https://user-images.githubusercontent.com/5302050/148696808-f730ad36-8d0b-4b5b-99b2-1917831f8916.gif" width="100%"></a>
 
@@ -891,6 +912,7 @@ If the status of the node has changed via a certain command, the entire command 
 
 ### v4.2.8 (latest)
 
+* Added support for Philips Hue Bridge Pro devices
 * Fixed an issue with Dial Node not working ([#11](https://github.com/mauricedominic/node-red-contrib-huemagic/issues/11))
 
 ### v4.2.7
@@ -1015,18 +1037,20 @@ If the status of the node has changed via a certain command, the entire command 
 * Other optimizations, dependency updates and clean up
 
 ### Previous versions
-The full changelog [changelog](https://github.com/mauricedominic/node-red-contrib-huemagic/blob/master/CHANGELOG.md) can be viewed here…
-
-
-***
-### Made with a pinch of magic in Stuttgart, Germany.
-
-If you like HueMagic, I appreciate a star or rating on this page! HueMagic is and will remain free. You can support the further development of the project with a small donation.
-
-Alternatively, you can support the project if you have an old device that is compatible with the Philips Hue bridge (or a device that is not officially supported by HueMagic) and want to get rid of it. Please contact me at huemagic@foddy.io to get an address where you can send your old device. The following devices could currently be considered: Gradient lights, Tap / Button devices or table / floor lights. These types of devices have not been extensively tested during HueMagic's development.
+The full changelog [changelog](https://github.com/BordetNicolas/node-red-contrib-huemagic/blob/master/CHANGELOG.md) can be viewed here…
 
 ***
-<a href="https://www.jetbrains.com/?from=HueMagic"><img src="https://gistcdn.githack.com/Foddy/062045775c28f5993ad646aba80e678c/raw/c84ea4ad31c72dde0883638fc9eaa2b51bba9962/jb.svg" height="50"></a><a href="https://dgtl.one/?from=HueMagic"><img src="https://gist.githubusercontent.com/Foddy/d0964219726def838c0408153b4fbf96/raw/78379ebd1f4751a16960ac904fc5f6a6c8ecad74/dgtlone.svg" height="50"> <a href="https://www.browserstack.com?from=HueMagic"><img src="https://gistcdn.githack.com/Foddy/062045775c28f5993ad646aba80e678c/raw/c84ea4ad31c72dde0883638fc9eaa2b51bba9962/browserstack.svg" height="50"></a>
 
-HueMagic for Node-RED is sponsored by [DGTL.ONE](https://dgtl.one/?from=HueMagic), [JetBrains](https://www.jetbrains.com/?from=HueMagic) and [BrowserStack](https://www.browserstack.com?from=HueMagic).<br>
+## Credits & Acknowledgments
+
+**Original Project**: This is a fork of [node-red-contrib-huemagic](https://github.com/Foddy/node-red-contrib-huemagic) by [Foddy](https://github.com/Foddy).
+
+- **Original Author**: Foddy Botosakis
+- **Original Repository**: https://github.com/Foddy/node-red-contrib-huemagic
+- **License**: Apache-2.0
+
+All code, documentation, and features from the original project have been preserved exactly as provided. This fork adds only support for Philips Hue Bridge Pro devices.
+
+The original HueMagic project was made with a pinch of magic in Stuttgart, Germany, and was sponsored by [DGTL.ONE](https://dgtl.one/?from=HueMagic), [JetBrains](https://www.jetbrains.com/?from=HueMagic) and [BrowserStack](https://www.browserstack.com?from=HueMagic).
+
 *Released under the [Apache License 2.0](https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)).*

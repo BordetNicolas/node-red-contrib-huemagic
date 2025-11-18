@@ -4,6 +4,7 @@
 
 ### v4.2.8 (latest)
 
+* Added support for Philips Hue Bridge Pro devices
 * Fixed an issue with Dial Node not working ([#11](https://github.com/mauricedominic/node-red-contrib-huemagic/issues/11))
 
 ### v4.2.7
