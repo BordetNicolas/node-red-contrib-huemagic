@@ -251,13 +251,13 @@ module.exports = function(RED)
 					{
 						let targetId = resource["owner"]["rid"];
 
-						if(scope.resources[targetId])
+						if(scope.resources[targetId] && scope.resources[targetId]["services"] && scope.resources[targetId]["services"][type])
 						{
 							// GET PREVIOUS STATE
 							previousState = scope.resources[targetId]["services"][type][id];
 
 							// IS BUTTON? -> REMOVE PREVIOUS STATES
-							if(type === "button")
+							if(type === "button" && scope.resources[targetId]["services"]["button"])
 							{
 								for (const [oneButtonID, oneButton] of Object.entries(scope.resources[targetId]["services"]["button"]))
 								{
@@ -291,11 +291,14 @@ module.exports = function(RED)
 						{
 							let targetId = resource["owner"]["rid"];
 
-							scope.resources[targetId]["services"][type][id] = mergedState;
-							scope.resources[targetId]["updated"] = currentDateTime;
+							if(scope.resources[targetId] && scope.resources[targetId]["services"] && scope.resources[targetId]["services"][type])
+							{
+								scope.resources[targetId]["services"][type][id] = mergedState;
+								scope.resources[targetId]["updated"] = currentDateTime;
 
-							// PUSH STATE
-							scope.pushUpdatedState(scope.resources[targetId], resource.type);
+								// PUSH STATE
+								scope.pushUpdatedState(scope.resources[targetId], resource.type);
+							}
 						}
 						else
 						{
